@@ -6,23 +6,12 @@ using System.Threading.Tasks;
 
 namespace Task1.Library
 {
-    public class Number
+    public static class Number
     {
         public static double FindRootByNewton(double number, int degree, double eps)
         {
-            /*double n;
-    cin >> n;
-    const double EPS = 1E-15;//1E-15
-    double x = 1;
-    for (;;) 
-    {
-        double nx = 
-        if (abs (x - nx) < EPS)  break;
-        x = nx;
-    }
-    printf ("%.15lf", x);  */
             double x = 1;
-            double xk = x - ((x - number) / (number * x));
+            double xk = 2 - (x / number);
             while (Math.Abs(x - xk) > eps)
             {
                 x = xk;
