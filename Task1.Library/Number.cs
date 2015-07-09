@@ -25,8 +25,9 @@ namespace Task1.Library
             double xk = x - ((x - number) / (number * x));
             while (Math.Abs(x - xk) > eps)
             {
-                xk = xk - ((Math.Pow(xk, degree) - number)/(number*Math.Pow(xk, degree - 1)));
                 x = xk;
+                xk = xk - ((Math.Pow(xk, degree) - number)/(number*Math.Pow(xk, degree - 1)));
+                
             }
             return x;
         }
