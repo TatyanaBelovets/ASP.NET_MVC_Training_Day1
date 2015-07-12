@@ -11,7 +11,7 @@ namespace Task1.ConsoleCheck
     {
         static void Main(string[] args)
         {
-            double rootByNewton = Number.FindRootByNewton(817, 4, 0.001);
+            double rootByNewton = MethodsForNumbers.FindRootByNewton(817, 4, 0.001);
             double rootByMath = Math.Pow(817, 0.25);
             Console.WriteLine("{0}, {1}, {2}", rootByMath, rootByNewton, Math.Abs(rootByMath - rootByNewton));
             //Number.FindRootByNewton(-817, 4, 0.001);
